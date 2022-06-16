@@ -13,19 +13,19 @@ function App() {
 
   return (
     <VStack p={5}>
-      <Flex w="100%">
-        <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">IMRK
-
-        </Heading>
-      <Spacer></Spacer>
-      <IconButton icon={<FaLinkedin/>} isRound="true"></IconButton>
-      <IconButton ml={2} icon={<FaInstagram/>} isRound="true"></IconButton>
-      <IconButton ml={2} icon={<FaGithub/>} isRound="true"></IconButton>
-      <IconButton ml={8} icon={isDark?<FaSun/>:<FaMoon/>} isRound="true" onClick={toggleColorMode}></IconButton>
-      </Flex>
-      <Header/>
-      <Social/>
-      <Profile/>
+      	<Flex w="100%" justifyContent={'space-between'} alignItems={'center'}>
+			<Heading size="md" fontWeight="semibold" color="cyan.400">IMRK</Heading>
+			{/* <Spacer /> */}
+			<Flex direction={'row'} justifyContent='space-between'>
+				<IconButton icon={<FaLinkedin/>} isRound="true"></IconButton>
+				<IconButton ml={2} icon={<FaInstagram/>} isRound="true"></IconButton>
+				<IconButton ml={2} icon={<FaGithub/>} isRound="true"></IconButton>
+				<IconButton ml={2} icon={isDark?<FaSun/>:<FaMoon/>} isRound="true" onClick={toggleColorMode}></IconButton>
+			</Flex>
+      	</Flex>
+      	<Header/>
+      	<Social/>
+      	<Profile/>
     </VStack>
   );
 }
